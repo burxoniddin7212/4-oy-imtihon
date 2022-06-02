@@ -22,9 +22,6 @@ let renderNews = function(inputvalue,selectvalue){
   fetch(API)
   .then((response) => {return response.json()})
   .then((data) => {
- 
-    
-
     let fragment = document.createDocumentFragment();
     data.articles.forEach((news) => {
     let elTemplateNewsClone = elTemplateNews.cloneNode(true);
@@ -41,25 +38,17 @@ let renderNews = function(inputvalue,selectvalue){
     $(".span-a-box", elTemplateNewsClone).dataset.publishedAt =news.publishedAt;
     
     fragment.append(elTemplateNewsClone);
-    
   })
   elListNews.append(fragment);
   })
 }
-
 renderNews(elInput.value,elSelect.value)
 
-elButtonSearch.addEventListener("click", (e) => {
-  e.preventDefault();
 
-  renderNews(elInput.value,elSelect.value)
-})
-
-
-
-//localStorage.clear();
+//Creat bookmark arry
 let bookMarkArry = JSON.parse(localStorage.getItem("news")) || [];
 
+//Bookmark render
 let bookmarkRender = function(arry){
   elListBookmark.innerHTML = "";
   let fragmentBookmark = document.createDocumentFragment();
@@ -79,6 +68,14 @@ let bookmarkRender = function(arry){
 }
 bookmarkRender(bookMarkArry);
 
+//Buttendi listining
+elButtonSearch.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  renderNews(elInput.value,elSelect.value)
+})
+
+//News list listining
 elListNews.addEventListener("click", (evt) => {
   evt.preventDefault();
 
@@ -113,7 +110,7 @@ elListNews.addEventListener("click", (evt) => {
   }
 })
 
-
+//Bookmark list listining
 elListBookmark.addEventListener("click", evt => {
   evt.preventDefault();
 

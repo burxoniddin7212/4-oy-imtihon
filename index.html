@@ -12,11 +12,11 @@
   <section class="section">
     <div class="container">
       <div class="inner mt-2">
-
+        <!-- Site heading -->
         <h2 class="text-center mb-3 text-white">World news</h2>
-
         
           <div class="form-bookmark-title-box d-flex">
+            <!-- Form -->
             <form class="news-form d-inline-block"">
               <div class="form-box">              
                 <input class="news-form-input form-control" style="width:200px ;" type="text" placeholder="Search">
@@ -32,14 +32,13 @@
               <h3 class="bookmark-title-text d-inline-block">News bookmark</h3>
             </div>
           </div>
-        
 
         <div class="news-list-bookmark-box mt-2 d-flex">
-
+          <!-- News list -->
           <div class="news-list-wrapper-box">
             <ul class="js-news-list list-unstyled d-flex justify-content-between flex-wrap"></ul>
           </div>
-
+          <!-- Bookmark list -->
           <div class="bookmark-wrapper-box ms-3">
             <ul class="js-bookmark-list list-unstyled" style="width:340px ; height: 10px;"></ul>
           </div>
@@ -49,7 +48,7 @@
       </div>
     </div>
   </section>
-
+  <!-- News template -->
   <template class="news-item-template">
     <li class="js-news-item card">
       <div class="card-body">
@@ -70,7 +69,7 @@
     </li>
   </template>
 
-
+  <!-- Bookmark template -->
   <template class="template-bookmark">
     <li class="bookmark-item p-1 mb-1">
       <p class="fw-bold m-0 text-tyle">News name: <span class="bookmark-name m-0 fw-normal"></span></p>
@@ -79,10 +78,6 @@
       <button class="bookmark-delete">Delete</button>
     </li>
   </template>
-
- 
-<!-- Button trigger modal -->
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
