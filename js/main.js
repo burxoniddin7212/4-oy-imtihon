@@ -17,7 +17,7 @@ let renderNews = function(inputvalue,selectvalue){
 
   elListNews.innerHTML = "";
 
-  let API = `https://newsapi.org/v2/everything?q=${inputvalue}&sortBy=${selectvalue}&apiKey=3071761379724631b5fdd5005776672e`;
+  let API = `https://newsapi.org/v2/everything?q=${inputvalue}&sortBy=${selectvalue}&apiKey=bb0f4b4f286b462fb683c50b09024240`;
   
   fetch(API)
   .then((response) => {return response.json()})
