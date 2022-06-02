@@ -1,0 +1,63 @@
+.form-box{
+  width:500px ;
+  margin-left: 120px;
+}
+
+.js-news-item{
+  padding: 5px;
+  width: 360px;
+  height: 500px;
+  background-color: aquamarine;
+  margin-bottom: 10px;
+  position: relative;
+  transition: 0.6s ease;
+}
+
+.js-news-item:hover{
+  transform: scale(1.02);
+
+}
+
+.bookmark-title-text{
+  margin-left: 210px;
+}
+
+.card-url{
+  display: block;
+}
+
+.card-img-but{
+  width: 320px;
+  height: auto;
+  object-fit: cover;
+}
+
+.font-size{
+  font-size: 20px;
+}
+
+.name-titlecontent-box{
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 420px;
+  margin-bottom: 5px;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  box-shadow: inset 0 0 10px rgba(106, 137, 210, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #80a3d7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9e9e9e;
+}

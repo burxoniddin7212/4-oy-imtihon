@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="inner mt-2">
+
+        <h2 class="text-center mb-3">World news</h2>
+
+        
+          <div class="form-bookmark-title-box d-flex">
+            <form class="news-form d-inline-block" action="https://echo.htmlacademy.ru" method="get">
+              <div class="form-box d-flex justify-content-between">
+                <input class="news-form-input form-control" style="width:200px ;" type="text" placeholder="Search">
+                <select class="news-form-selct form-control" style="width:200px ;" name="sort_by" id="">
+                  <option value="relevancy" selected>Relevancy</option>
+                  <option value="popularity">Popularity</option>
+                  <option value="publishedAt">PublishedAt</option>
+                </select>
+              </div>
+            </form>
+            <h3 class="bookmark-title-text d-inline-block">News bookmark</h3>
+          </div>
+        
+
+        <div class="news-list-bookmark-box mt-2 d-flex">
+
+          <div class="news-list-wrapper-box">
+            <ul class="js-news-list list-unstyled d-flex justify-content-between flex-wrap" style="width:750px ;"></ul>
+          </div>
+
+          <div class="bookmark-wrapper-box bg-danger ms-3" style="height: 10px;">
+            <ul class="js-bookmark-list list-unstyled" style="width:320px ; height: 10px;"></ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <template class="news-item-template">
+    <li class="js-news-item card">
+      <div class="card-body">
+        <div class="name-titlecontent-box">
+          <img class="card-img-but">
+          <p class="fw-bold font-size">Name: <span class="card-name fw-normal"></span></p>
+          <p class="fw-bold font-size">Title: <span class="card-title fw-normal"></span></p>
+          <p class="fw-bold font-size">Description :<span class="card-description fw-normal"></span></p>
+          <p class="fw-bold font-size">Content: <span class="card-content fw-normal"></span></p>
+          <span class="card-publishedAt"></span>
+        </div>
+        <div class="span-a-box d-flex position-absolute gap-4">
+          <a class="card-url btn btn-primary href="#" target="_blank">Go site</a>
+          <button class="btn btn-primary">Modal</button>
+          <button class="btn btn-primary">Bookmark</button>
+        </div>
+      </div>
+    </li>
+  </template>
+
+  <script src="./bootstrap/js/bootstrap.js"></script>
+  <script src="./js/utilis.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
